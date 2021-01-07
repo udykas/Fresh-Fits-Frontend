@@ -35,7 +35,7 @@ class Items extends Component {
     return (
       <Center>
         <p>Items</p>
-        <Pagination></Pagination>
+        <Pagination page={this.props.page} />
         <Query query={ALL_ITEMS_QUERY}>
           {/* data, error and loading are destructured from payload */}
           {({ data, error, loading }) => {
@@ -51,7 +51,7 @@ class Items extends Component {
             )
           }}
         </Query>
-        <Pagination></Pagination>
+        <Pagination page={this.props.page} />
       </Center>
     );
   }
