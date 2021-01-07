@@ -6,3 +6,5 @@ const Pagination = props => (
     <p>Hi, I'm Pagination!</p>
   </PaginationStyles>
 )
+
+export default Pagination;
