@@ -72,10 +72,11 @@ class CreateItem extends Component {
               const res = await createItem();
               // navigate to the single item page
               console.log(res);
-              Router.push({
+              await Router.push({
                 pathname: '/item',
                 query: { id: res.data.createItem.id }
               })
+              location.reload(); // May need to remove, if it removes cache for log in or cart
           }}>
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
