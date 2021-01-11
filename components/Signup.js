@@ -31,9 +31,10 @@ class Signup extends Component {
         {(signup, { error, loading }) => {
 
         return(
-          <Form method="post" onSubmit={(e) => {
+          <Form method="post" onSubmit={async (e) => {
             e.preventDefault();
-            signup();
+            const res = await signup();
+            this.setState({ name: '', email: '', password: '' });
           }}>
             <fieldset disabled={loading} aria-busy={loading}>
               <h2>Sign up for an account</h2>
