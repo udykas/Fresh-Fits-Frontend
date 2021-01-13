@@ -51,6 +51,10 @@ injectGlobal`
     text-decoration: none;
     color: ${theme.black};
   }
+  button {
+    color: ${theme.black};
+    font-family: 'radnika_next';
+  }
 `;
 
 class Page extends Component {
